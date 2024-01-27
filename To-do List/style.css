@@ -1,0 +1,293 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: lemon;
+    src: url("Lemon-Regular.ttf");
+  }
+
+.main, html {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: repeating-radial-gradient(rgba(0, 76, 255, 0), rgba(0, 26, 128, 0.223) 15%, rgb(26, 0, 140));  
+}
+
+
+.house {
+    background-color: rgba(89, 43, 175, 0.482);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45vw;
+    height:auto;
+    top: 30vh;
+    border-radius: 4vh;
+    padding: 15px;
+    padding-bottom: 10vh;
+    overflow:auto;
+}
+
+
+h2 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 10px;
+    font-size: 3vw;
+    color: #fa7979d0;
+    font-family: lemon;
+    text-shadow:2px 2px #655555;
+}
+
+h2:hover {
+    color: #fa7979;
+}
+
+
+.firstDiv {
+    /* background-color: rgb(184, 90, 58); */
+    position: relative;
+    width: 35vw;
+    height: 5vh;
+    display: flex;
+    justify-content: space-between;
+    top: 20px;
+    margin-top: 10px;
+    border-radius: 50px;
+}
+
+
+.input {
+    /* background-color: rgb(167, 205, 43); */
+    font-size: large;
+    outline: none;
+    border-radius: 50px;
+    width: 100%;
+    padding-left: 1vw;
+    border: transparent;
+    background-image: linear-gradient(to bottom right, rgb(212, 212, 223) 50%, rgba(255, 255, 255, 0.768));
+}
+
+
+.addButton {
+    background-image: linear-gradient(to bottom right, rgba(0, 47, 255, 0.488) 50%, rgba(174, 0, 255, 0.641));
+    border-radius: 50px;
+    width: 8vw;
+    border: transparent;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-size: large;
+    transition: 0.5s;
+    outline: none;
+}
+
+.addButton:hover {
+    box-shadow: 0 8px 10px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+#memoBox {
+    background-color: rgba(237, 200, 252, 0.148);
+    position: relative;
+    display: none;
+    flex-direction: column;
+    border-radius: 30px;
+    width: 35vw;
+    top: 8vh;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3vh 0vh;
+    height: auto;
+    overflow:auto;
+}
+
+.memo:nth-child(odd) {
+    background-color: rgba(115, 168, 206, 0.232);
+}
+
+.memo:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.423);
+}
+
+.memo input[type="checkbox"]:checked ~ span {
+    text-decoration: line-through;
+}
+
+
+.memo {
+    /* background-color: rgb(23, 237, 216); */
+    /* text-decoration: line-through; */
+    position: relative;
+    display: grid;
+    align-items: center;
+    grid-template-columns:1fr 8fr 1fr;
+    margin-bottom: 1.2vh;
+    margin:0;
+    padding: 1vh 0vh;
+    transition: 0.8s;
+}
+
+
+.check {
+    margin-left: 1.65vw;
+    margin-right: 10px;
+    width: 2.5vw;
+    height: 2.5vh;
+    accent-color: rgba(130, 144, 238, 0.837);
+}
+
+.check:hover {
+    cursor: pointer;
+    accent-color: rgba(208, 108, 248, 0.805);
+}
+
+
+.delete {
+    background: transparent;
+    border: transparent;
+    position: relative;
+    transition: 0.3s;
+    width: 3.5vw;
+    height: 3.5vh;
+    padding-right: 4.5px;
+    margin-right: 1.5vw;
+}
+
+.delete:hover{
+    background: rgba(255, 255, 255, 0.132);
+    /* width: 3.5vw; */
+    height: 3.8vh;
+    /* padding-left: 0.45vw; */
+    border-radius: 1vh;
+    cursor: pointer;
+    box-shadow: 0 8px 10px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    scale: 1.2;
+
+}
+
+img {
+    padding-left: 5px;
+    max-width:1.8vw;
+    background:transparent;
+
+}
+
+
+.clear {
+    margin: 5px;
+    bottom: -9vh;
+    cursor: pointer;
+    background: rgba(224, 85, 85, 0.473);
+    outline: none;
+    border: transparent;
+    height: 4.2vh;
+    width: 10vw;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font:bolder;
+    color: aliceblue;
+    border-radius: 15px;
+    font-size: 1.5vw;
+    font-family: cursive;
+}
+
+.clear:hover {
+    background: rgba(224, 85, 85, 0.748);
+    box-shadow: 5px 8px 10px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    height: 4.5vh;
+    width: 10.5vw;
+}
+
+
+
+@media screen and (max-width: 700px) {
+    .house {
+      width: 75vw;
+      display: flex;
+      align-items: center;
+      transition: 0.7s;
+    }
+
+
+    h2 {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        top: 10px;
+        font-size: 5vw;
+        color: #f17f0de5;
+        font-family: lemon;
+        text-shadow:2px 2px #655555;
+        transition: 0.7s;
+    }
+
+
+    .firstDiv {
+        width: 60vw;
+        height: 5.5vh;
+    }
+    
+    
+    .input {
+        width: 100%;
+    }
+    
+    
+    .addButton {
+        width: 13vw;
+        font-size: larger;
+        transition: 0.7s;
+    }
+    
+
+    #memoBox {
+        width: 60vw;
+        padding: 2.5vh 0vh;
+    }
+    
+    
+    .memo {
+        font-size: 5vw;
+    }
+    
+    
+    .check {
+        width: 3.25vw;
+        height: 3.25vh;
+    }
+    
+    
+    .delete {
+        width: 3.5vw;
+        height: 3.5vh;
+        padding-right: 4.5px;
+        margin-right: 2.5vw;
+    }
+
+
+    .delete:hover{
+        width: 4vw;
+    }
+
+
+    img {
+        max-width:4vw;
+        padding-left: 0;
+    }
+
+
+    .clear {
+        height: 3.75vh;
+        width: 12vw;
+    }
+
+  }
